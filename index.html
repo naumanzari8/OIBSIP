@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temperature converter</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    }
+    body{
+        width: 100vw;
+        height: 100vh;
+        background-color: aliceblue;
+        display: grid;
+        place-items: center;
+    }
+    form{
+        background-color: rgb(232, 241, 248);
+        padding: 80px;
+        width: 50%;
+        margin: 100px auto;
+        text-align: center;
+        box-shadow: 10px 10px 2px 2px rgb(224, 231, 236);
+        border-radius: 12px;
+    }
+    #tempCalculate label{
+        font-size: 30px;
+        font-weight: bold;
+    }
+    #temp{
+        border: none;
+        padding: 10px;
+        height: 40px;
+        width: 100px;
+        font-size: 20px;
+        margin-top: 20px;
+    }
+    #temp_differ{
+        height: 40px;
+        border: none;
+        margin-top: 20px;
+        font-size: 15px;
+    }
+    [type="submit"]{
+        height: 40px;
+        margin: 20px;
+        width:150px;
+        font-size: 15px;
+        font-weight: bold;
+        border: none;
+        background-color: rgb(0, 4, 255);
+        color: white;
+        border-top-left-radius: 12px;
+        border-bottom-right-radius: 12px;
+        cursor: pointer;
+    }
+    #resultContainer{
+        margin: 5px;
+        display: inline-block;
+        border: none;
+        border-radius: 12px;
+        height: 35px;
+        width: 200px;
+        font-size: 20px;
+        padding-top: 5px;
+        background-color: rgb(255, 255, 255);
+    }
+    #labl{
+        font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-weight: bold;
+        color: rgb(0, 4, 255);
+    }
+</style>
+<body>
+    <form id="tempCalculate" onsubmit="calculateTemp(); return false">
+        <label for="temp" id="labl">Temperature Calculator</label><br><hr>
+        <label>Temperature</label>
+        <input type="number" name="temp" id="temp">
+        <br>
+
+        <label>Type</label>
+        <select name="temp_differ" id="temp_differ">
+            <option value="cel">Celsius</option>
+            <option value="fah">Fahrenhiet</option>
+        </select><br>
+
+        <input type="submit" name="temp"> <br>
+        <span id="resultContainer">Result</span>
+    </form>
+
+    <script src="./script.js"></script>
+</body>
+</html>
